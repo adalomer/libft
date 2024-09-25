@@ -1,13 +1,7 @@
 
-int ft_isalpha(char *c)
+int ft_isalpha(char c)
 {
-    int a;
-    a = 0;
-    while(c[a] != '\0')
-    {
-        if (c[a] >= 65 && c[a] <= 90 || c[a] >= 97 && c[a] <= 122)
-        return(1);
-        a++;
-    }
+    if (c >= 65 && c <= 90 || c >= 97 && c <= 122)
+    return(1);
     return (0);
 }

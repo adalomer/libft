@@ -1,5 +1,5 @@
 
-char *ft_strchr(const char *a, char c)
+char *ft_strchr(const char *a, int c)
 {
     int b;
     b = 0;
