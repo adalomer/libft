@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 14:28:29 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/26 14:34:04 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/26 18:06:21 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/26 18:48:16 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(char c)
+#include "libft.h"
+#include <stdlib.h>
+
+void *ft_calloc(int b, int size)
 {
-    if (c >= 65 && c <= 90 || c >= 97 && c <= 122)
-    return (1);
-    return (0);
+    int a;
+    a = 0;
+    char *p;
+    p = malloc(b * size);
+    while((b*size) > a)
+    {
+        (p)+a = 0;
+        a++;
+    }
+    return((void*)p);
 }
+

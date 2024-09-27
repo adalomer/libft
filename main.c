@@ -1,8 +1,9 @@
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
+void *ft_calloc(int b, int size);
 
 int main()
 {
-	int a = '6';
-	printf("%d\n",ft_isprint(a));
-	printf("%d\n",isprint(a));
+	int *a = calloc(sizeof(int),3);
 }
