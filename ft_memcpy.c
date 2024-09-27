@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 18:06:21 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 13:50:43 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/27 14:28:20 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/27 14:33:19 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-
-void	ft_calloc(int b, int size)
+void *ft_memcpy(void *dest, const void *src, int n)
 {
-	int		a;
-	char	*p;
-
+	int a;
 	a = 0;
-	p = malloc(b * size);
-	while ((b * size) > a)
+	char *d;
+	char *e;
+	d = src;
+	e = dest;
+	while(a < n)
 	{
-		p[a] = 0;
-		a++;
+		e[a] = d[a];
+		a++; 
 	}
-	return ((void *)p);
+	return(dest);
 }

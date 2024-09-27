@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 18:06:21 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 13:50:43 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/27 14:34:02 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/27 14:37:13 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-
-void	ft_calloc(int b, int size)
+void *memmove(void *dest, const void *src, int n)
 {
-	int		a;
-	char	*p;
-
+	int a;
 	a = 0;
-	p = malloc(b * size);
-	while ((b * size) > a)
+	char *d;
+	char *e;
+	char *f;
+	d = src;
+	e = dest;
+	f = e;
+	while(a < n)  
 	{
-		p[a] = 0;
-		a++;
+		f[a] = d[a];
+		a++; 
 	}
-	return ((void *)p);
+	return(dest);
+
 }
