@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 14:34:02 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/28 02:00:21 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/27 20:18:40 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/27 20:26:18 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memmove(void *dest, const void *src, int n)
+char *ft_strnstr(const char * s1, const char * s2, int len)
 {
-	if (!dest && !src)
-		return (0);
 	int a;
-	char *d;
-	char *e;
+	int b;
 	a = 0;
-	d = src;
-	e = dest;
-	while(a < n)  
+	if(s1 == 0 || s2 == 0)
+	return(0);
+	while(a < len && s1[a] != '\0')
 	{
-		e[a] = d[a];
-		a++; 
+		b = 0;
+		while(s1[a+b] == s2[b])
+		{
+			if(s2[b] == 0)
+				return(&s1[a]);
+			b++;
+		}
+		a++;
 	}
-	dest = &e;
-
-	return(dest);
-
 }

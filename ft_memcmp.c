@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 14:34:02 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/28 02:00:21 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/27 20:07:39 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/27 20:12:43 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memmove(void *dest, const void *src, int n)
-{
-	if (!dest && !src)
-		return (0);
+  int ft_memcmp(const void *s1, const void *s2, int n)
+    {
 	int a;
-	char *d;
-	char *e;
+	unsigned char *f;
+	unsigned char *e;
+	f = (unsigned char *)s1;
+	e = (unsigned char *)s2;
 	a = 0;
-	d = src;
-	e = dest;
-	while(a < n)  
+	if (!f || !e)
+		return (0);
+	while(f[a] != '\0' && e[a] != '\0' && a < n)
 	{
-		e[a] = d[a];
-		a++; 
+		if(f[a] - e[a] != 0)
+			return (f[a]-e[a]);
+		a++;
 	}
-	dest = &e;
-
-	return(dest);
-
-}
+	return (0);
+   }
+   

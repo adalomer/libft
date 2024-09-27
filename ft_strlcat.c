@@ -1,23 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/28 01:37:49 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/28 01:37:58 by omadali          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char ft_strlcat(char *dst, const char *src, int size)
 {
     int a;
     int b;
+    int d;
+    d = 0;
     a = 0;
     b = 0;
     while(dst[a] != '\0')
     a++;
-    while(a <= size || src[b] != '\0')
+    while(src[b] != '\0')
+    b++;
+    d = a + b;
+    b = 0;
+    while(a < size && src[b] != '\0')
     {
         dst[a]= src[b];
         a++;
-        b++;
+        b++;    
     }
-    return();
-}
-#include <stdio.h>
-int main()
-{
-    char a[15] = "anans";
-    char b[5] = "baban";
-    printf("%d",ft_strlcat(a,b,15));
+    dst[a] = '\0';
+    return(d);
 }

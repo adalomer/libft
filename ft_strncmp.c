@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 14:34:02 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/28 02:00:21 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/27 19:27:08 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/27 20:13:56 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memmove(void *dest, const void *src, int n)
-{
-	if (!dest && !src)
-		return (0);
+   int ft_strncmp(const char *s1, const char *s2, int n)
+   {
 	int a;
-	char *d;
-	char *e;
 	a = 0;
-	d = src;
-	e = dest;
-	while(a < n)  
+	if (!s1 || !s2)
+		return (0);
+	while(s1[a] != '\0' && s2[a] != '\0' && a < n)
 	{
-		e[a] = d[a];
-		a++; 
+		if(s1[a] - s2[a] != 0)
+			return (s1[a]-s2[a]);
+		a++;
 	}
-	dest = &e;
-
-	return(dest);
-
-}
+	return (0);
+   }
