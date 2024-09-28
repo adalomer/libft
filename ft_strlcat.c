@@ -6,11 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 01:37:49 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/28 01:37:58 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/29 01:59:36 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_strlcat(char *dst, const char *src, int size)
+int ft_strlcat(char *dst, const char *src, int size)
 {
     int a;
     int b;

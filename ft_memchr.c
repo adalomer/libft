@@ -6,7 +6,7 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 19:44:16 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 20:05:42 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/29 01:59:50 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ void *ft_memchr(const void *s, int c, int n)
 	}
 	return(0);
 }
-#include <stdio.h>
+

@@ -6,12 +6,14 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:28:20 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 14:33:19 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/29 01:59:47 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void *ft_memcpy(void *dest, const void *src, int n)
 {
+	if (!dest && !src)
+		return (0);
 	int a;
 	a = 0;
 	char *d;

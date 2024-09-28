@@ -6,10 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 01:40:06 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/28 01:51:17 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/29 01:16:41 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int ft_strlcpy(char *dst, const char *src, int size)
 {
 	int b;

@@ -6,10 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:34:02 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/28 12:42:10 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/29 01:59:44 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 void *ft_memmove(void *dest, const void *src, int n)
 {
 	if (!dest || !src)

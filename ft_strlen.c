@@ -6,10 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:43:34 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/25 22:43:36 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/29 02:00:00 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int ft_strlen(char *c)
 {
     int a;
