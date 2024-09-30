@@ -6,7 +6,7 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 13:11:07 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 15:17:07 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 17:14:33 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,10 @@ char **ft_split(char const *s, char c)
 {
     int i;
     int b;
-    int l;
     int k;
     char **f;
     k = 0;
     i = 0;
-    l = 0;
     b = 0;
     f = (char **)malloc(sizeof(char*)*(word_count(s,c)+1));
     while(s[i] != '\0')
@@ -55,7 +53,7 @@ char **ft_split(char const *s, char c)
         if(s[i] != c)
         {
             b = word_len(&s[i], c);
-            f[l] = (char *)malloc(b + 1);
+            f[k] = (char *)malloc(b + 1);
             b = 0;
             while (s[i] && s[i] != c)
             f[k][b++] = s[i++];

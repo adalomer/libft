@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 16:12:08 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 17:01:44 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/30 17:30:03 by omadali           #+#    #+#             */
+/*   Updated: 2024/09/30 17:51:04 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	int a;
+#include "libft.h"
 
-	if ( !s || !f )
-		return;
-	a = 0;
-	while(s[a] != '\0')
+void ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
 	{
-		f(a,(s+a));
-		a++;
+		ft_putchar_fd('-',fd);
+		ft_putchar_fd('2',fd);
+		n = 147483648;
 	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-',fd);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd((n / 10),fd);
+		ft_putnbr_fd((n % 10),fd);
+	}
+	else
+		ft_putchar_fd((n + 48),fd);
 }
