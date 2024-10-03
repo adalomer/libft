@@ -6,16 +6,16 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:18:40 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/03 23:51:13 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/04 01:59:13 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	size_t a;
-	size_t b;
+	size_t	a;
+	size_t	b;
 
 	if (*s2 == '\0')
 		return ((char *)s1);
@@ -31,5 +31,5 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 		}
 		a++;
 	}
-	return (0);
+	return (NULL);
 }
