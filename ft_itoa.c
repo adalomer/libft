@@ -6,14 +6,14 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 14:13:12 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 14:14:24 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:47:57 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int count_word(long int a ,int *result)
+static int count_word(long int a ,int *result)
 {
     int b;
     b = 0;

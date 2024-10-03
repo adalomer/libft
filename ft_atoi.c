@@ -6,17 +6,19 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:46:36 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/25 21:46:38 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/01 00:17:32 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *a)
+#include "libft.h"
+
+int ft_atoi(const char *a)
 {
     int b = 0;
     int c = 1;
     int d = 0;
 
-    while( a[b]>= 9 && a[b] <= 13 || a[b] == 32)
+    while((a[b]>= 9 && a[b] <= 13) || a[b] == 32)
         b++;
     if (a[b] == '-')
     {

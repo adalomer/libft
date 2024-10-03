@@ -6,9 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:18:40 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 20:26:18 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:47:45 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strnstr(const char * s1, const char * s2, int len)
 {
@@ -23,9 +25,10 @@ char *ft_strnstr(const char * s1, const char * s2, int len)
 		while(s1[a+b] == s2[b])
 		{
 			if(s2[b] == 0)
-				return(&s1[a]);
+				return((char *)s1+a);
 			b++;
 		}
 		a++;
 	}
+	return(0);
 }

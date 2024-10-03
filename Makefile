@@ -6,13 +6,17 @@
 #    By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 13:45:19 by omadali           #+#    #+#              #
-#    Updated: 2024/09/30 22:05:21 by omadali          ###   ########.fr        #
+#    Updated: 2024/09/30 22:28:14 by omadali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lib		ft.a
+NAME = libft.a
 
 CC = gcc
+
+AR = ar rcs
+
+FLAGS = -Wextra -Wall -Werror
 
 SRCS =	ft_atoi.c \
 		ft_bzero.c \
@@ -50,7 +54,19 @@ SRCS =	ft_atoi.c \
 		ft_toupper.c
 OBJS=$(SRCS:.c=.o)
 
-zort:
-	@echo $(OBJS)
+$(NAME): $(OBJS)
+	@$(AR)  $(NAME) $(OBJS) 
+	@echo "OLMAK" 
+%.o: %.c
+	@$(CC) $(FLAGS) -c $< -o $@
 
-		
+all: $(NAME)
+
+clean:
+	@rm -f $(OBJS)
+	@echo "TEMİZ"
+
+fclean: clean
+	@rm -f $(NAME)
+	@echo "TERTEMİZ"
+re :fclean all

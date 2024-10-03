@@ -6,13 +6,15 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:01:40 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/25 22:01:42 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/01 21:57:34 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(char b)
+#include "libft.h"
+
+int ft_isascii(int b)
 {
-    if ( b >=0 && b <= 127)
+    if ( b >= 0 && b <= 127)
         return(1);
     return(0);
 }

@@ -6,10 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 14:28:00 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/26 14:28:19 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:36:53 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int ft_isprint(int c)
 {

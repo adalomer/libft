@@ -6,9 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 14:27:48 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/26 18:05:34 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:47:34 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int a)
 {

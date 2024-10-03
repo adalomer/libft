@@ -6,14 +6,14 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:36:16 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/29 01:59:59 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 13:37:26 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int first_index(char const *s1, char const *set)
+static int first_index(char const *s1, char const *set)
 {
 	int f;
 	int a;
@@ -35,11 +35,11 @@ int first_index(char const *s1, char const *set)
 	return(a);
 }
 
-int last_index(char const *s1, char const *set)
+static int last_index(char const *s1, char const *set)
 {
 	int b;
 	int f;
-	b = ft_strlen(s1)-1;
+	b = ft_strlen((char *)s1)-1;
 	f = 0;
 	 while(b >= 0)
     {

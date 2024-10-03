@@ -6,24 +6,24 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:06:21 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 13:50:43 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 13:18:27 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_calloc(int b, int size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int		a;
-	char	*p;
+	size_t	bytes;
+	void	*ptr;
 
-	a = 0;
-	p = malloc(b * size);
-	while ((b * size) > a)
-	{
-		p[a] = 0;
-		a++;
-	}
-	return ((void *)p);
+	bytes = nmemb * size;
+	if (size && ((bytes / size) != nmemb))
+		return (NULL);
+	ptr = malloc(bytes);
+	if (NULL == ptr)
+		return (NULL);
+	ft_bzero(ptr, bytes);
+	return (ptr);
 }

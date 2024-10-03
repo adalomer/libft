@@ -6,9 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 13:55:15 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 14:20:35 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:34:34 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_bzero(void *s, int n)
 {

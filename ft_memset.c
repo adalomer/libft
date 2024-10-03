@@ -6,10 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:22:09 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/27 14:40:54 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:47:54 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
  void *ft_memset(void *s, int c, int n)
  {
 	if (!s)

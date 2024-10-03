@@ -6,10 +6,11 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 14:27:45 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/26 14:27:52 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:51:06 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int ft_tolower(int a)
 {

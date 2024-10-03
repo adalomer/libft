@@ -6,13 +6,14 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 13:11:07 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 17:14:33 by omadali          ###   ########.fr       */
+/*   Updated: 2024/09/30 23:47:52 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-int word_count(char *s, char c)
+static int word_count(const char *s, char c)
 {
 int a;
     int b;
@@ -29,7 +30,7 @@ int a;
     }
     return (b);
 }
-int word_len(char *s,char c)
+static int word_len(const char *s,char c)
 {
     int a;
     a = 0;
@@ -64,8 +65,4 @@ char **ft_split(char const *s, char c)
     }
     f[k] = 0;
     return (f);
-}
-int main()
-{
-  ft_split("anabanan",'a');
 }
