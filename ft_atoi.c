@@ -6,32 +6,34 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:46:36 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/01 00:17:32 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 21:09:27 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *a)
+int	ft_atoi(const char *a)
 {
-    int b = 0;
-    int c = 1;
-    int d = 0;
+	int	b;
+	int	c;
+	int	d;
 
-    while((a[b]>= 9 && a[b] <= 13) || a[b] == 32)
-        b++;
-    if (a[b] == '-')
-    {
-        c = c * -1;
-        b++;
-    }
-    else if (a[b] == '+')
-    b++;
-
-    while (a[b] >= '0' && a[b]<= '9')
-    {
-        d = d * 10 + (a[b] - '0');
-        b++;
-    }
-    return d * c;
+	b = 0;
+	c = 1;
+	d = 0;
+	while ((a[b] >= 9 && a[b] <= 13) || a[b] == 32)
+		b++;
+	if (a[b] == '-')
+	{
+		c = -1;
+		b++;
+	}
+	else if (a[b] == '+')
+		b++;
+	while (a[b] >= '0' && a[b] <= '9')
+	{
+		d = d * 10 + (a[b] - '0');
+		b++;
+	}
+	return (d * c);
 }

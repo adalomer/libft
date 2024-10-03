@@ -6,15 +6,15 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:46:42 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 23:35:27 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 21:11:21 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int d)
+int	ft_isalnum(int d)
 {
-    if((d > 47 && d < 58) || (d > 64 && d < 91) || (d > 96 && d < 123))
-        return(1);
-    return(0);
+	if ((d > 47 && d < 58) || (d > 64 && d < 91) || (d > 96 && d < 123))
+		return (1);
+	return (0);
 }

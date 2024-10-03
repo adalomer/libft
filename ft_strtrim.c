@@ -6,7 +6,7 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:36:16 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/03 13:37:26 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 22:54:28 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ static int first_index(char const *s1, char const *set)
 {
 	int f;
 	int a;
+
 	a = 0;
 	f = 0;
-	  while(s1[a] != '\0')
+	while(s1[a] != '\0')
     {
         f = 0;
         while(set[f] !='\0')
         {
             if(s1[a] == set[f])
-            break;
+                break;
             f++;
         }
         if(set[f] == '\0')
@@ -41,17 +42,17 @@ static int last_index(char const *s1, char const *set)
 	int f;
 	b = ft_strlen((char *)s1)-1;
 	f = 0;
-	 while(b >= 0)
+	while(b >= 0)
     {
         f = 0;
         while(set[f] != '\0')
         {
             if(s1[b] == set[f])
-            break;
+                break;
             f++;
         }
         if(set[f] == '\0')
-        break;
+            break;
         b--;
     }
 	return(b);
@@ -67,7 +68,9 @@ char *ft_strtrim(char const *s1, char const *set)
     return(0);
 	a = first_index(s1,set);
 	b = last_index(s1,set);
+    if(b < a)
+    b = a-1;
     c = (char *)malloc(sizeof(char)*(b-a+2));
-    ft_strlcpy(c,s1+a,b-a+1);
+    ft_strlcpy(c, s1+a, b-a+2);
     return(c);
 }

@@ -6,17 +6,17 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:26:31 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 23:47:52 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 21:22:58 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void ft_putstr_fd(char *c,int fd)
+void	ft_putstr_fd(char *c, int fd)
 {
-	int a;
+	int	a;
 
 	a = ft_strlen(c);
-	write(fd,c,a);
+	write(fd, c, a);
 }

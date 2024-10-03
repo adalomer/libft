@@ -6,15 +6,15 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 14:28:00 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 23:36:53 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 21:14:13 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if(c >= 32 && c != 127)
-    return (1);
-    return(0);
+	if (c >= 32 && c != 127)
+		return (1);
+	return (0);
 }

@@ -6,15 +6,15 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 23:36:02 by omadali           #+#    #+#             */
-/*   Updated: 2024/09/30 23:36:15 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 21:13:33 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(char a)
+int	ft_isdigit(char a)
 {
-        if(a >= 48 && a <= 57)
-        return (1);
-    return (0);
+	if (a >= 48 && a <= 57)
+		return (1);
+	return (0);
 }
