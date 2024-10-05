@@ -6,7 +6,7 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:34:02 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/04 02:01:36 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/04 02:25:52 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*d;
 	char		*s;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (0);
 	d = (char *)dest;
 	s = (char *)src;

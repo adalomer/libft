@@ -6,7 +6,7 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 19:44:16 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/03 21:15:53 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/04 02:22:16 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			a;
 	unsigned char	*d;
 
-	if (!s)
-		return (0);
 	d = (unsigned char *)s;
 	a = 0;
 	c = c % 256;

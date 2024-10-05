@@ -6,7 +6,7 @@
 /*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 02:08:15 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/04 00:03:19 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/04 02:22:43 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	len = 0;
 	while (s[len] != '\0')
 		len++;
