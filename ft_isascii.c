@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
+/*   By: omadali <omadali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:01:40 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/03 21:12:33 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/08 12:30:35 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int b)
+int	ft_isascii(int c)
 {
-	if (b >= 0 && b <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

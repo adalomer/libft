@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
+/*   By: omadali <omadali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 13:11:07 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/05 15:58:46 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/08 18:30:17 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static int	wordsave(char **f, char const *s, char c, int i)
 	{
 		if (s[i] != c)
 		{
-			b = word_len(&s[i], c);
+			b = word_len(s + i, c);
 			f[k] = (char *)malloc(sizeof(char) * (b + 1));
 			if (!f[k])
 			{
