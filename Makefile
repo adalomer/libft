@@ -6,7 +6,7 @@
 #    By: omadali <omadali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 13:45:19 by omadali           #+#    #+#              #
-#    Updated: 2024/10/08 14:40:19 by omadali          ###   ########.fr        #
+#    Updated: 2024/10/15 18:18:54 by omadali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,3 +70,5 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "TERTEMİZ"
 re :fclean all
+
+.PHONY: all bonus clean fclean re

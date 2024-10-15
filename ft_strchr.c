@@ -6,7 +6,7 @@
 /*   By: omadali <omadali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 19:07:33 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/08 12:38:19 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/11 16:26:32 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (c < 0)
-		c += 256;
-	c = c % 256;
+	c = (unsigned char)c;
 	while (*s)
 	{
 		if (*s == c)
