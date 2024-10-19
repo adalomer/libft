@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omadali <omadali@student.42.fr>            +#+  +:+       +#+        */
+/*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:46:42 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/08 12:29:53 by omadali          ###   ########.fr       */
+/*   Updated: 2024/10/03 21:11:21 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isalnum(int d)
 {
-	if ((c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123))
+	if ((d > 47 && d < 58) || (d > 64 && d < 91) || (d > 96 && d < 123))
 		return (1);
 	return (0);
 }

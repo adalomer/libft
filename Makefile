@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: omadali <omadali@student.42.fr>            +#+  +:+       +#+         #
+#    By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 13:45:19 by omadali           #+#    #+#              #
-#    Updated: 2024/10/15 18:18:54 by omadali          ###   ########.fr        #
+#    Updated: 2024/09/30 22:28:14 by omadali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,5 +70,3 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "TERTEMİZ"
 re :fclean all
-
-.PHONY: all bonus clean fclean re

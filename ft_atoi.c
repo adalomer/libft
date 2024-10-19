@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omadali <omadali@student.42.fr>            +#+  +:+       +#+        */
+/*   By: omadali <adalomer60@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:27:00 by omadali           #+#    #+#             */
-/*   Updated: 2024/10/08 12:27:07 by omadali          ###   ########.fr       */
+/*   Created: 2024/09/25 21:46:36 by omadali           #+#    #+#             */
+/*   Updated: 2024/10/03 21:09:27 by omadali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *a)
 {
 	int	b;
 	int	c;
@@ -21,18 +21,18 @@ int	ft_atoi(const char *str)
 	b = 0;
 	c = 1;
 	d = 0;
-	while ((str[b] >= 9 && str[b] <= 13) || str[b] == 32)
+	while ((a[b] >= 9 && a[b] <= 13) || a[b] == 32)
 		b++;
-	if (str[b] == '-')
+	if (a[b] == '-')
 	{
 		c = -1;
 		b++;
 	}
-	else if (str[b] == '+')
+	else if (a[b] == '+')
 		b++;
-	while (str[b] >= '0' && str[b] <= '9')
+	while (a[b] >= '0' && a[b] <= '9')
 	{
-		d = d * 10 + (str[b] - '0');
+		d = d * 10 + (a[b] - '0');
 		b++;
 	}
 	return (d * c);
