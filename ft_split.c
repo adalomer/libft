@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 static void	free_malloc(char **f, int k)
 {
