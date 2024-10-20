@@ -1,3 +1,6 @@
+!!!!! VERİLEN PROJEDE her fonksiyona #include "libft.h" eklenmeyecek sadece o dosyayı farklı bir dosyada da kullanıyorsanız kullanmanız gerek  !!!!!!!!!!!!!!!!
+
+
 Kütüphane  derleme süreçleri hakkında arka planda neler yapıldığında dair bilgiler
 
 Bir C programını gcc ile derlediğinizde, arka planda bir dizi adım gerçekleşir. Derleyici, kaynak kodunu makine diline çevirir ve çalıştırılabilir bir dosya üretir. Bu süreci dört ana adıma ayırabiliriz: Preprocessing (Ön işlem), Compilation (Derleme), Assembly (Montaj), Linking (Bağlama).
