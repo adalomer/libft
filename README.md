@@ -1,4 +1,4 @@
-!!!!! VERİLEN PROJEDE her fonksiyona #include "libft.h" eklenmeyecek sadece o dosyayı farklı bir dosyada da kullanıyorsanız kullanmanız gerek  !!!!!!!!!!!!!!!!
+!!!!! VERİLEN PROJEDE her fonksiyona #include "libft.h" eklenmeyecek sadece o dosyayı farklı bir dosyada da kullanıyorsanız kullanmanız gerek  ayrıca kodların çoğuna NULL CHECK KONTROL ETMEMİZ GEREKİYOR BAZI KODLARIN DÜZELTİLMESİ GEREKİYOR !!!!!!!!!!!!!!!!
 
 
 Kütüphane  derleme süreçleri hakkında arka planda neler yapıldığında dair bilgiler
