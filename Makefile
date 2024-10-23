@@ -70,3 +70,4 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "TERTEMİZ"
 re :fclean all
+.PHONY all clean fclean re
