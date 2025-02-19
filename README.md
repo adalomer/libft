@@ -342,18 +342,24 @@ Overlap olması için src'nin bellekte dst değişkeninden önce konumlanmış o
 Örnek:
 
 ```c
-char src[] = "Emre Akdik";
+char src[] = "Ömer Ali Adalı";
 char dest[100];
 
 ft_memcpy(&src[2], src, 9);
 printf("%s", dest);
 ```
 
-* Bu örnekte src ve dst aynı string içinden oluşmuştur ve src'nin başlangıcı dst'nin başlangıcından daha önce olduğu için src'nin bellek bloğu dst'nin bellek bloğundan öndedir. Bu durumda overlap mümkündür. src'miz "Emre Akdik"dir, dest ise "re Akdik" dir.
-* Dest ilk iki indeksin kopyalanması ile "em akdik"e dönüşür fakat aynı zamanda src'de "Emem Akdik"e dönüşür. İşte burada kopyalama esnasında karakterler üst üste binmiş olur.
-* src'den kopyalama için alınacak sıradaki iki indeks re'den em'e dönüşmüş oldu ve dest'e "re" eklemesi gerekirken kopyalama esnasında src bozulduğu için "em" ekleyecek. Artık dest "ememkdik" olmuştur.
-* Bundan sonraki tüm adımlarda her kopyalama işlemi yapıldığında sıradaki kopyalama için alınacak karakterleri değiştirecek ve istenilen sonucu alamayacağız.&#x20;
-* Ana mantık src'nin dst'den önce olması ve dst'ye src'den kopyalama yaparken dst ve src'nin üst üste binip srcnin bozulmasıdır. Çıktıyı örneği derleyerek kontrol edebilirsiniz.
+* Bu örnekte src ve dest aynı string içinden oluşmuştur ve src'nin başlangıcı dest'in başlangıcından daha önce olduğu için src'nin bellek bloğu dest'in bellek bloğundan öndedir. Bu durumda overlap mümkündür.
+
+* src başlangıçta "Ömer Ali Adalı" şeklindedir, dest ise "er Ali Adalı" olacaktır.
+
+* İlk iki indeksin kopyalanmasıyla dest "öm Ali Adalı"ye dönüşür fakat aynı zamanda src "Ömöm Ali Adalı"ye dönüşür.
+
+* Bu noktada, src'den kopyalama için alınacak sıradaki iki indeks "er" yerine "öm" olarak değiştiği için dest "ömömli Adalı" olur.
+
+* Bundan sonraki tüm adımlarda her kopyalama işlemi yapıldığında, sıradaki kopyalama için alınacak karakterler değişerek istenilen sonucu alamayacağız.
+
+* Ana mantık, src'nin dest'ten önce olması ve dest'ye src'den kopyalama yaparken src'nin bozulmasıdır. Çıktıyı örneği derleyerek kontrol edebilirsiniz.
 
 ### Bazı fonksiyonlarda değişkenleri nasıl karşılaştırıyoruz?
 
