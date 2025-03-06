@@ -16,43 +16,42 @@ static void	free_malloc(char **f, int k)
 {
 	while (k-- > 0)
 		free(f[k]);
+	free(f);  // `f` dizisinin kendisini de serbest bırakmalısınız
 }
 
 static int	word_count(const char *s, char c)
 {
-	int	a;
-	int	b;
+	int count = 0;
+	int i = 0;
 
-	a = 0;
-	b = 0;
-	while (s[a] != '\0')
+	while (s[i] != '\0')
 	{
-		while (s[a] == c && s[a] != '\0')
-			a++;
-		if (s[a] != c && s[a] != '\0')
-			b++;
-		while (s[a] != c && s[a] != '\0')
-			a++;
+		while (s[i] == c && s[i] != '\0') // boşlukları atla
+			i++;
+		if (s[i] != c && s[i] != '\0') // kelime bul
+		{
+			count++;
+			while (s[i] != c && s[i] != '\0') // kelimeyi geç
+				i++;
+		}
 	}
-	return (b);
+	return (count);
 }
 
 static int	word_len(const char *s, char c)
 {
-	int	a;
+	int len = 0;
 
-	a = 0;
-	while (s[a] && s[a] != c)
-		a++;
-	return (a);
+	while (s[len] && s[len] != c)
+		len++;
+	return (len);
 }
 
 static int	wordsave(char **f, char const *s, char c, int i)
 {
-	int	b;
-	int	k;
+	int b;
+	int k = 0;
 
-	k = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
@@ -61,35 +60,38 @@ static int	wordsave(char **f, char const *s, char c, int i)
 			f[k] = (char *)malloc(sizeof(char) * (b + 1));
 			if (!f[k])
 			{
-				free_malloc(f, k);
+				free_malloc(f, k); // Hata durumunda tüm kelimeleri serbest bırak
 				return (1);
 			}
-			b = 0;
-			while (s[i] && s[i] != c)
-				f[k][b++] = s[i++];
-			f[k++][b] = '\0';
+			// Kelimeyi kopyala
+			for (int j = 0; j < b; j++)
+				f[k][j] = s[i + j];
+			f[k][b] = '\0'; // Sonlandırma
+			i += b;
+			k++;
 		}
 		else
-			i++;
+			i++; // Boşlukları geç
 	}
-	f[k] = NULL;
+	f[k] = NULL; // Dizinin sonunu işaret et
 	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**f;
-	int		a;
-	int		i;
+	int		i = 0;
+	int		count;
 
-	i = 0;
-	f = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
+	if (!s)
+		return (NULL);
+	count = word_count(s, c); // Kelime sayısını al
+	f = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!f)
 		return (NULL);
-	a = wordsave(f, s, c, i);
-	if (a != 0)
+	if (wordsave(f, s, c, i) != 0)
 	{
-		free(f);
+		free(f); // Eğer kelime kaydetme başarısız olursa, diziyi serbest bırak
 		return (NULL);
 	}
 	return (f);
